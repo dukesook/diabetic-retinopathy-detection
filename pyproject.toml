@@ -3,5 +3,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dr_detection"
+name = "drd"
 version = "0.1.0"
+dependencies = [
+    "pandas",
+]
