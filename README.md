@@ -1,6 +1,8 @@
-# Knowledge-Guided Diabetic Retinopathy Detection from Retinal Images
+# Knowledge-Guided Diabetic Retinopathy Detection
 
-CSCI 5750: Artificial Intelligence II
+### NMSU CSCI 5750: Artificial Intelligence II Group Project
+
+## Team Members
 
 - Sajidur Rahman
 - Devon Sookhoo
