@@ -37,3 +37,9 @@ pip install -e .
 ```
 python -m drd
 ```
+
+## Important Links
+
+Paper on _Single Domain Generalization in Diabetic Retinopathy: A Neuro-Symbolic Learning Approach_:
+
+- https://arxiv.org/html/2509.02918v1

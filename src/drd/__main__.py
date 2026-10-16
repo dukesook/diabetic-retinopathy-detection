@@ -57,7 +57,7 @@ def load_dataset_metadata():
 
 
 def main():
-    print("Initializing Diabetic Retinopathy Detection Pipeline...\n")
+    print("===== Diabetic Retinopathy Detection =====\n")
     df = load_dataset_metadata()
 
 
