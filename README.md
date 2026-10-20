@@ -44,10 +44,10 @@ Paper on _Single Domain Generalization in Diabetic Retinopathy: A Neuro-Symbolic
 
 - https://arxiv.org/html/2509.02918v1
 
-### Data Sources
+### Training Data
 
-- APTOS
-- EyePACS
-- Messidor-1
-  - [here](https://www.adcis.net/en/third-party/messidor/)
-- Messidor-2
+Eyepacs, Aptos, Messidor Diabetic Retinopathy
+
+- https://www.kaggle.com/datasets/ascanipek/eyepacs-aptos-messidor-diabetic-retinopathy
+- 92K JPEG images
+- 22Gb
