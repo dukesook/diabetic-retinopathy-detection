@@ -7,4 +7,5 @@ name = "drd"
 version = "0.1.0"
 dependencies = [
     "pandas",
+    "kagglehub",
 ]

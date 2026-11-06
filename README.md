@@ -38,6 +38,11 @@ pip install -e .
 python -m drd
 ```
 
+The command reports training and test metadata and creates a reproducible,
+stratified 20% validation metadata split from the labeled training set. The test
+set has no ground-truth labels; `sampleSubmission.csv` provides image IDs and
+placeholder levels only. The large image archives are not extracted.
+
 ## Important Links
 
 Paper on _Single Domain Generalization in Diabetic Retinopathy: A Neuro-Symbolic Learning Approach_:
