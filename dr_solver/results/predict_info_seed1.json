@@ -1,0 +1,11 @@
+{
+  "temperature": 1.1112526655197144,
+  "cnn_ms_per_image": {
+    "val": 1.8389661744768726,
+    "test": 1.1744040013264432
+  },
+  "device": "NVIDIA H100 NVL",
+  "tta": true,
+  "checkpoint_epoch": 6,
+  "checkpoint_val_qwk": 0.7273410219956531
+}

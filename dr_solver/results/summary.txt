@@ -1,0 +1,101 @@
+{
+  "seeds": [
+    42,
+    1,
+    2
+  ],
+  "test_patients": 2635,
+  "cnn_referral_auc": 0.9144018783984182,
+  "training": {
+    "seed": 42,
+    "model": "efficientnet_b0",
+    "timm_version": "1.0.31",
+    "torch_version": "2.11.0+cu128",
+    "size": 384,
+    "best_val_qwk": 0.7203151126628061,
+    "train_minutes": 7.375979212919871,
+    "device": "NVIDIA H100 NVL",
+    "n_train": 24588,
+    "n_val": 5268
+  },
+  "prediction": {
+    "temperature": 1.074642539024353,
+    "cnn_ms_per_image": {
+      "val": 1.8743883504411354,
+      "test": 1.201422209983985
+    },
+    "device": "NVIDIA H100 NVL",
+    "tta": true,
+    "checkpoint_epoch": 6,
+    "checkpoint_val_qwk": 0.7203151126628061
+  },
+  "chosen_params": {
+    "select_by": "f1",
+    "C2_threshold": 0.56,
+    "C4_lam": 0.0,
+    "C4_beta": 0.0,
+    "C5_lam": 1.0,
+    "C5_beta": 0.0,
+    "train_prior": [
+      0.7349113388644868,
+      0.06946477956726858,
+      0.15064258988124288,
+      0.02484952009110135,
+      0.02013177159590044
+    ]
+  },
+  "symbolic_changes_vs_C1": {
+    "C4": {
+      "patients_with_different_patient_grade_vs_C1": 0,
+      "patients_with_different_referral_vs_C1": 0,
+      "eyes_with_different_grade_vs_C1": 0
+    },
+    "C5": {
+      "patients_with_different_patient_grade_vs_C1": 110,
+      "patients_with_different_referral_vs_C1": 102,
+      "eyes_with_different_grade_vs_C1": 185
+    }
+  },
+  "referral_C5_right_C1_wrong": 75,
+  "referral_C1_right_C5_wrong": 27,
+  "significance": [
+    {
+      "A": "C5",
+      "B": "C1",
+      "A_right_B_wrong": 75,
+      "A_wrong_B_right": 27,
+      "p_value_exact": 2.1476915287407434e-06,
+      "f1_diff": 0.01848350910013119,
+      "ci_lo": 0.0030385670691507522,
+      "ci_hi": 0.03438779023550329
+    },
+    {
+      "A": "C5",
+      "B": "C2",
+      "A_right_B_wrong": 42,
+      "A_wrong_B_right": 43,
+      "p_value_exact": 1.0,
+      "f1_diff": 0.0006702412868633267,
+      "ci_lo": -0.014323835005551002,
+      "ci_hi": 0.014099177040587057
+    },
+    {
+      "A": "C5",
+      "B": "C4",
+      "A_right_B_wrong": 75,
+      "A_wrong_B_right": 27,
+      "p_value_exact": 2.1476915287407434e-06,
+      "f1_diff": 0.01848350910013119,
+      "ci_lo": 0.0030385670691507522,
+      "ci_hi": 0.03438779023550329
+    }
+  ],
+  "solver_ms_per_patient_median": {
+    "C1": NaN,
+    "C2": NaN,
+    "C3": 1.588585029821843,
+    "C4": 1.5346820000559092,
+    "C5": 1.5332330367527902,
+    "C6": 1.4556729584001005
+  }
+}

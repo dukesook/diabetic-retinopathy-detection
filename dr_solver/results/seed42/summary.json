@@ -1,0 +1,92 @@
+{
+  "runs": [
+    "seed42"
+  ],
+  "test_patients": 2635,
+  "cnn_referral_auc": 0.9144018783984182,
+  "training": {
+    "seed": 42,
+    "model": "efficientnet_b0",
+    "timm_version": "1.0.31",
+    "torch_version": "2.11.0+cu128",
+    "size": 384,
+    "best_val_qwk": 0.7203151126628061,
+    "train_minutes": 7.375979212919871,
+    "device": "NVIDIA H100 NVL",
+    "n_train": 24588,
+    "n_val": 5268
+  },
+  "prediction": {
+    "temperature": 1.074642539024353,
+    "cnn_ms_per_image": {
+      "val": 1.8743883504411354,
+      "test": 1.201422209983985
+    },
+    "device": "NVIDIA H100 NVL",
+    "tta": true,
+    "checkpoint_epoch": 6,
+    "checkpoint_val_qwk": 0.7203151126628061
+  },
+  "chosen_params": {
+    "run": "seed42",
+    "probs_tag": "seed42",
+    "select_by": "f1",
+    "min_spec": null,
+    "C2_threshold": 0.56,
+    "C4_lam": 0.0,
+    "C4_beta": 0.0,
+    "C5_lam": 1.0,
+    "C5_beta": 0.0,
+    "C7_mu": 0.25,
+    "C7_beta": 0.0,
+    "val_crit": {
+      "C2": 0.7724867724867724,
+      "C4": 0.759124087591241,
+      "C5": 0.7723649247121346,
+      "C7": 0.7725694444444444
+    },
+    "train_prior": [
+      0.7349113388644868,
+      0.06946477956726858,
+      0.15064258988124288,
+      0.02484952009110135,
+      0.02013177159590044
+    ]
+  },
+  "symbolic_changes_vs_C1": {
+    "C4": {
+      "patients_different_patient_grade_vs_C1": 0,
+      "patients_different_referral_vs_C1": 0,
+      "eyes_different_grade_vs_C1": 0
+    },
+    "C5": {
+      "patients_different_patient_grade_vs_C1": 110,
+      "patients_different_referral_vs_C1": 102,
+      "eyes_different_grade_vs_C1": 185
+    },
+    "C7": {
+      "patients_different_patient_grade_vs_C1": 193,
+      "patients_different_referral_vs_C1": 75,
+      "eyes_different_grade_vs_C1": 409
+    }
+  },
+  "referral_wins_losses_vs_C1": {
+    "C5": {
+      "right_where_C1_wrong": 75,
+      "wrong_where_C1_right": 27
+    },
+    "C7": {
+      "right_where_C1_wrong": 54,
+      "wrong_where_C1_right": 21
+    }
+  },
+  "solver_ms_per_patient_median": {
+    "C1": NaN,
+    "C2": NaN,
+    "C3": 1.5911610098555684,
+    "C4": 1.535479968879372,
+    "C5": 1.5349470195360482,
+    "C7": 2.745270961895585,
+    "C6": 1.4584690215997398
+  }
+}
