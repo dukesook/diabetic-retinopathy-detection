@@ -1,0 +1,12 @@
+{
+  "ensemble_of": [
+    "seed42",
+    "seed1",
+    "seed2"
+  ],
+  "cnn_ms_per_image": {
+    "val": 5.48741155803973,
+    "test": 3.541011466473284
+  },
+  "device": "NVIDIA H100 NVL"
+}
