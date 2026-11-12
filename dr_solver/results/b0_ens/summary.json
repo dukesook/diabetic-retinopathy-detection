@@ -1,0 +1,82 @@
+{
+  "runs": [
+    "b0_ens"
+  ],
+  "test_patients": 2635,
+  "cnn_referral_auc": 0.9257118141374197,
+  "training": {},
+  "prediction": {
+    "ensemble_of": [
+      "seed42",
+      "seed1",
+      "seed2"
+    ],
+    "cnn_ms_per_image": {
+      "val": 5.48741155803973,
+      "test": 3.541011466473284
+    },
+    "device": "NVIDIA H100 NVL"
+  },
+  "chosen_params": {
+    "run": "b0_ens",
+    "probs_tag": "b0_ens",
+    "select_by": "f1",
+    "min_spec": null,
+    "C2_threshold": 0.47,
+    "C4_lam": 0.0,
+    "C4_beta": 0.0,
+    "C5_lam": 1.0,
+    "C5_beta": 0.5,
+    "C7_mu": 0.5,
+    "C7_beta": 0.5,
+    "val_crit": {
+      "C2": 0.7884615384615384,
+      "C4": 0.7863247863247863,
+      "C5": 0.793286219081272,
+      "C7": 0.7982683982683983
+    },
+    "train_prior": [
+      0.7349113388644868,
+      0.06946477956726858,
+      0.15064258988124288,
+      0.02484952009110135,
+      0.02013177159590044
+    ]
+  },
+  "symbolic_changes_vs_C1": {
+    "C4": {
+      "patients_different_patient_grade_vs_C1": 0,
+      "patients_different_referral_vs_C1": 0,
+      "eyes_different_grade_vs_C1": 0
+    },
+    "C5": {
+      "patients_different_patient_grade_vs_C1": 67,
+      "patients_different_referral_vs_C1": 59,
+      "eyes_different_grade_vs_C1": 170
+    },
+    "C7": {
+      "patients_different_patient_grade_vs_C1": 166,
+      "patients_different_referral_vs_C1": 75,
+      "eyes_different_grade_vs_C1": 486
+    }
+  },
+  "referral_wins_losses_vs_C1": {
+    "C5": {
+      "right_where_C1_wrong": 38,
+      "wrong_where_C1_right": 21
+    },
+    "C7": {
+      "right_where_C1_wrong": 38,
+      "wrong_where_C1_right": 37
+    }
+  },
+  "solver_ms_per_patient_median": {
+    "C1": NaN,
+    "C2": NaN,
+    "C3": 1.5939439763315022,
+    "C4": 1.5332390321418643,
+    "C5": 1.6700109699741006,
+    "C7": 3.0153460102155805,
+    "C6": 1.4577010297216475
+  }
+}
